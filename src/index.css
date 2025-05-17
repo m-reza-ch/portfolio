@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Smooth transitions for color, background, and border */
+html,
+body {
+  transition-property: background-color, color, border-color;
+  transition-duration: 450ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* smoother curve */
+  scroll-behavior: smooth;
+  backface-visibility: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: #f9fafb; /* Light mode background */
+  color: #111827; /* Light mode text color */
+  user-select: none;
+  will-change: background-color, color, border-color;
+}
+
+/* Dark theme styles */
+.dark html,
+.dark body {
+  background: #0a0a0a; /* Dark mode background */
+  color: #f3f4f6; /* Dark mode text color */
+}
+
+/* Re-using your transition utilities with improvements */
+.transition-colors {
+  transition-property: background-color, color, border-color;
+  transition-duration: 450ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: background-color, color, border-color;
+}
+
+/* Animations (unchanged but with will-change) */
+@layer utilities {
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .animate-blink {
+    animation: blink 0.8s step-end infinite;
+    will-change: opacity;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
+  }
+
+  .animate-loading-bar {
+    animation: loading 0.8s ease infinite;
+    will-change: transform;
+  }
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition-property: opacity, transform;
+  transition-duration: 900ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  backface-visibility: hidden;
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FadeIn animation - slower and smoother */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: opacity, transform;
+}
