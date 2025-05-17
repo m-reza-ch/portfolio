@@ -103,7 +103,7 @@ export const Home = ({ publicationsRef, contactRef, educationRef }) => {
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <button
               onClick={() => scrollTo(publicationsRef)}
-              className="inline-flex items-center gap-2 bg-violet-600 dark:bg-teal-500 text-white py-3 px-8 rounded font-semibold transition hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-violet-400 dark:focus:ring-teal-400 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 bg-violet-600 dark:bg-teal-500 text-white py-3 px-8 rounded font-semibold transition hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-violet-400 dark:focus:ring-teal-400 cursor-pointer"
             >
               View Publications
             </button>
