@@ -71,7 +71,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, theme, setTheme, homeRef }) => {
             className="cursor-pointer font-mono text-xl font-bold text-black dark:text-white transition-colors duration-300"
           >
             m.reza
-            <span className="text-violet-500 dark:text-teal-400">.ch</span>
+            <span className="text-violet-500 dark:text-blue-400">.ch</span>
           </button>
 
           {/* Desktop menu */}
@@ -91,7 +91,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, theme, setTheme, homeRef }) => {
                 </span>
                 <motion.div
                   className="absolute bottom-[-5px] left-0 w-0 h-[2px] rounded-full transition-all duration-300 group-hover:w-full
-                    bg-violet-500 dark:bg-teal-400"
+                    bg-violet-500 dark:bg-blue-400"
                   style={{ originX: "left" }}
                 />
               </motion.div>
@@ -151,7 +151,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, theme, setTheme, homeRef }) => {
             {/* Theme Toggle Button */}
             <motion.button
               onClick={toggleTheme}
-              className="text-black dark:text-white hover:text-violet-600 dark:hover:text-teal-400 transition text-xl focus:outline-none cursor-pointer"
+              className="text-black dark:text-white hover:text-violet-600 dark:hover:text-blue-400 transition text-xl focus:outline-none cursor-pointer"
               title="Toggle Theme"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -206,7 +206,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, theme, setTheme, homeRef }) => {
                 </span>
                 <motion.div
                   className="absolute bottom-0 left-0 w-0 h-[2px] rounded-full transition-all duration-300 group-hover:w-full
-                    bg-violet-500 dark:bg-teal-400"
+                    bg-violet-500 dark:bg-blue-400"
                   style={{ originX: "left" }}
                 />
               </motion.div>

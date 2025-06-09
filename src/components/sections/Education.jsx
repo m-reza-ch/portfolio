@@ -63,7 +63,7 @@ export const Education = ({ coursesRef }) => {
   return (
     <section
       id="education"
-      className="min-h-screen flex flex-col py-20 relative text-black dark:text-white bg-white dark:bg-zinc-950 transition-colors"
+      className="min-h-screen flex flex-col py-20 relative text-black dark:text-white bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-300"
     >
       <RevealOnScroll>
         <div className="max-w-5xl mx-auto px-4">
@@ -71,14 +71,14 @@ export const Education = ({ coursesRef }) => {
             Education
           </h2>
 
-          <div className="relative border-l-2 border-violet-500/30 dark:border-teal-500/30 pl-8">
+          <div className="relative border-l-2 border-violet-500/30 dark:border-blue-500/30 pl-8">
             {timeline.map((item, idx) => (
               <div
                 key={idx}
                 className="mb-10 relative"
-                // hover:-translate-y-1 hover:border-violet-500/30 dark:hover:border-teal-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0)] dark:hover:shadow-[0_2px_8px_rgba(20,158,149,0)] transition
+                // hover:-translate-y-1 hover:border-violet-500/30 dark:hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0)] dark:hover:shadow-[0_2px_8px_rgba(37,99,235,0)] transition
               >
-                <span className="absolute -left-11 top-0 w-6 h-6 bg-violet-500 dark:bg-teal-500 rounded-full"></span>
+                <span className="absolute -left-11 top-0 w-6 h-6 bg-violet-500 dark:bg-blue-500 rounded-full"></span>
                 <h3 className="text-xl font-semibold text-black dark:text-gray-100">
                   {item.degree}
                 </h3>
@@ -90,7 +90,7 @@ export const Education = ({ coursesRef }) => {
                   <div className="space-y-2 mb-4">
                     {item.details.map((detail, i) => (
                       <div key={i} className="flex items-start gap-2">
-                        <span className="mt-1 w-1 h-5 bg-violet-400 dark:bg-teal-400 rounded-sm" />
+                        <span className="mt-1 w-1 h-5 bg-violet-400 dark:bg-blue-400 rounded-sm" />
                         <p className="text-gray-700 dark:text-gray-300">
                           {detail}
                         </p>
@@ -101,14 +101,14 @@ export const Education = ({ coursesRef }) => {
 
                 {item.skills.length > 0 && (
                   <div className="mt-1">
-                    <h4 className="text-sm font-semibold text-violet-600 dark:text-teal-400 mb-2">
+                    <h4 className="text-sm font-semibold text-violet-600 dark:text-blue-400 mb-2">
                       Key Skills
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {item.skills.map((skill, i) => (
                         <span
                           key={i}
-                          className="bg-violet-500/10 dark:bg-teal-500/10 rounded text-violet-700 dark:text-teal-300 px-2 py-0.5 text-xs font-medium tracking-wide rounded-full hover:bg-violet-500/20 dark:hover:bg-teal-500/20 hover:shadow-[0_2px_6px_rgba(139,92,246,0.1)] dark:hover:shadow-[0_2px_6px_rgba(20,158,149,0.1)] transition-all"
+                          className="bg-violet-500/10 dark:bg-blue-500/10 rounded text-violet-700 dark:text-blue-300 px-2 py-0.5 text-xs font-medium tracking-wide rounded-full hover:bg-violet-500/20 dark:hover:bg-blue-500/20 hover:shadow-[0_2px_6px_rgba(139,92,246,0.1)] dark:hover:shadow-[0_2px_6px_rgba(37,99,235,0.1)] transition-all"
                         >
                           {skill}
                         </span>

@@ -96,7 +96,7 @@ export const Research = () => {
     <section
       id="research"
       title="Research"
-      className="min-h-screen flex flex-col py-20 relative items-center justify-center bg-white dark:bg-zinc-950"
+      className="min-h-screen flex flex-col py-20 relative items-center justify-center bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-300"
     >
       <RevealOnScroll>
         <div className="max-w-6xl mx-auto px-4">
@@ -108,7 +108,7 @@ export const Research = () => {
             {interests.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-transparent backdrop-blur-md rounded-lg p-6 border border-black/10 dark:border-white/10 hover:-translate-y-1 hover:border-violet-500/30 dark:hover:border-teal-500/30 hover:shadow-[0_2px_8px_rgba(139,92,246,0.3)] dark:hover:shadow-[0_2px_8px_rgba(20,158,149,0.3)] transition-all"
+                className="bg-transparent backdrop-blur-md rounded-lg p-6 border border-black/10 dark:border-white/10 hover:-translate-y-1 hover:border-violet-500/30 dark:hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(139,92,246,0.3)] dark:hover:shadow-[0_2px_8px_rgba(37,99,235,0.3)] transition-all"
               >
                 <h3 className="text-lg font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
                   {item.category}
@@ -117,7 +117,7 @@ export const Research = () => {
                   {item.topics.map((topic, i) => (
                     <span
                       key={i}
-                      className="bg-violet-500/10 dark:bg-teal-500/10 rounded text-violet-700 dark:text-teal-300 px-2 py-0.5 text-xs font-medium tracking-wide hover:bg-violet-500/20 dark:hover:bg-teal-500/20 hover:shadow-[0_2px_6px_rgba(139,92,246,0.1)] dark:hover:shadow-[0_2px_6px_rgba(20,158,149,0.1)] transition-all"
+                      className="bg-violet-500/10 dark:bg-blue-500/10 rounded text-violet-700 dark:text-blue-300 px-2 py-0.5 text-xs font-medium tracking-wide hover:bg-violet-500/20 dark:hover:bg-blue-500/20 hover:shadow-[0_2px_6px_rgba(139,92,246,0.1)] dark:hover:shadow-[0_2px_6px_rgba(37,99,235,0.1)] transition-all"
                     >
                       {topic}
                     </span>

@@ -30,15 +30,25 @@ function App() {
     document.body.className = theme;
   }, [theme]);
 
+  useEffect(() => {
+    // Scroll to top on mount to prevent page jump
+    window.scrollTo({ top: 0, behavior: "instant" });
+
+    // Disable browser scroll restoration
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  }, []);
+
   return (
     <>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       <div
         className={`min-h-screen transition-opacity duration-700 ${
           isLoaded ? "opacity-100" : "opacity-0"
-        } bg-white text-black dark:bg-black dark:text-gray-100 min-h-screen transition-colors duration-300 ${
-          theme === "dark" ? "dark" : ""
-        }`}
+        } 
+        min-h-screen text-base
+        bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-300`}
       >
         {/* Pass theme and toggle function to Navbar */}
         <Navbar

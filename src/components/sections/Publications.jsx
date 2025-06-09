@@ -57,7 +57,7 @@ export const Publications = () => {
   return (
     <section
       id="publications"
-      className="min-h-screen flex flex-col py-20 relative items-center justify-center bg-white dark:bg-zinc-950"
+      className="min-h-screen flex flex-col py-20 relative items-center justify-center bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-300"
     >
       <RevealOnScroll>
         <div className="max-w-5xl mx-auto px-4">
@@ -84,7 +84,7 @@ const PubCard = ({ pub, isOpen, onToggle }) => {
   return (
     <div
       className="bg-transparent backdrop-blur-md p-6 rounded-xl border border-black/10 dark:border-white/10 
-        hover:-translate-y-1 hover:border-violet-500/30 dark:hover:border-teal-500/30 hover:shadow-[0_2px_8px_rgba(139,92,246,0.2)] dark:hover:shadow-[0_2px_8px_rgba(20,158,149,0.2)] transition-all"
+        hover:-translate-y-1 hover:border-violet-500/30 dark:hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(139,92,246,0.2)] dark:hover:shadow-[0_2px_8px_rgba(37,99,235,0.2)] transition-all"
     >
       <h3 className="text-xl font-semibold mb-1 text-gray-900 dark:text-gray-100 text-justify">
         {pub.title}
@@ -101,7 +101,7 @@ const PubCard = ({ pub, isOpen, onToggle }) => {
           {pub.date}
         </span>
         <span className="text-gray-400 dark:text-gray-500">|</span>
-        <span className="bg-violet-600/20 dark:bg-teal-600/20 text-violet-700 dark:text-teal-300 px-2 py-0.5 rounded text-xs font-medium tracking-wide hover:bg-violet-500/20 dark:hover:bg-teal-500/20 hover:shadow-[0_2px_6px_rgba(139,92,246,0.1)] dark:hover:shadow-[0_2px_6px_rgba(20,158,149,0.1)] transition-all">
+        <span className="bg-violet-600/20 dark:bg-blue-600/20 text-violet-700 dark:text-blue-300 px-2 py-0.5 rounded text-xs font-medium tracking-wide hover:bg-violet-500/20 dark:hover:bg-blue-500/20 hover:shadow-[0_2px_6px_rgba(139,92,246,0.1)] dark:hover:shadow-[0_2px_6px_rgba(37,99,235,0.1)] transition-all">
           {pub.status}
         </span>
       </div>
@@ -111,7 +111,7 @@ const PubCard = ({ pub, isOpen, onToggle }) => {
           href={pub.doi}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-2 py-1 rounded-md text-violet-600 dark:text-teal-300 text-sm font-semibold bg-transparent dark:border-teal-300/30 hover:bg-violet-600/10 dark:hover:bg-teal-300/10 hover:text-violet-700 dark:hover:text-teal-400 transform transition duration-300 ease-in-out active:scale-95"
+          className="inline-flex items-center gap-2 px-2 py-1 rounded-md text-violet-600 dark:text-blue-300 text-sm font-semibold bg-transparent dark:border-blue-300/30 hover:bg-violet-600/10 dark:hover:bg-blue-300/10 hover:text-violet-700 dark:hover:text-blue-400 transform transition duration-300 ease-in-out active:scale-95"
         >
           <Link size={16} />
           DOI / Preprint
@@ -119,7 +119,7 @@ const PubCard = ({ pub, isOpen, onToggle }) => {
 
         <button
           onClick={onToggle}
-          className="inline-flex items-center gap-2 px-2 py-1 rounded-md text-violet-600 dark:text-teal-300 text-sm font-semibold bg-transparent dark:border-teal-300/30 hover:bg-violet-600/10 dark:hover:bg-teal-300/10 hover:text-violet-700 dark:hover:text-teal-400 transform transition duration-300 ease-in-out active:scale-95 cursor-pointer"
+          className="inline-flex items-center gap-2 px-2 py-1 rounded-md text-violet-600 dark:text-blue-300 text-sm font-semibold bg-transparent dark:border-blue-300/30 hover:bg-violet-600/10 dark:hover:bg-blue-300/10 hover:text-violet-700 dark:hover:text-blue-400 transform transition duration-300 ease-in-out active:scale-95 cursor-pointer"
         >
           {isOpen ? (
             <>
@@ -146,7 +146,7 @@ const PubCard = ({ pub, isOpen, onToggle }) => {
           >
             <hr className="border-gray-300 dark:border-gray-700 w-1/2 border-[0.5px] mx-auto my-4" />
             <div className="text-sm text-gray-700 dark:text-gray-300">
-              <h4 className="text-sm font-semibold text-violet-600 dark:text-teal-400 mb-2">
+              <h4 className="text-sm font-semibold text-violet-600 dark:text-blue-400 mb-2">
                 Abstract
               </h4>
               <p className="text-justify mb-4 font-semibold">{pub.abstract}</p>
@@ -154,14 +154,14 @@ const PubCard = ({ pub, isOpen, onToggle }) => {
               {/* Keywords */}
               {pub.keywords?.length > 0 && (
                 <div className="mt-1">
-                  <h5 className="text-sm font-semibold text-violet-600 dark:text-teal-400 mb-2">
+                  <h5 className="text-sm font-semibold text-violet-600 dark:text-blue-400 mb-2">
                     Keywords:
                   </h5>
                   <div className="flex flex-wrap gap-2">
                     {pub.keywords.map((keyword, index) => (
                       <span
                         key={index}
-                        className="bg-violet-500/10 dark:bg-teal-500/10 rounded text-violet-700 dark:text-teal-300 px-2 py-0.5 text-xs font-medium tracking-wide hover:bg-violet-500/20 dark:hover:bg-teal-500/20 hover:shadow-[0_2px_6px_rgba(139,92,246,0.1)] dark:hover:shadow-[0_2px_6px_rgba(20,158,149,0.1)] transition-all"
+                        className="bg-violet-500/10 dark:bg-blue-500/10 rounded text-violet-700 dark:text-blue-300 px-2 py-0.5 text-xs font-medium tracking-wide hover:bg-violet-500/20 dark:hover:bg-blue-500/20 hover:shadow-[0_2px_6px_rgba(139,92,246,0.1)] dark:hover:shadow-[0_2px_6px_rgba(37,99,235,0.1)] transition-all"
                       >
                         {keyword}
                       </span>
