@@ -128,7 +128,7 @@ export const Contact = () => {
   };
 
   const inputBaseClasses =
-    "w-full bg-gray-100 text-black dark:bg-white/5 dark:text-white border border-gray-300 dark:border-white/10 rounded px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-violet-500 dark:focus:ring-teal-500 focus:border-violet-500 dark:focus:border-teal-500 focus:bg-violet-500/10 dark:focus:bg-teal-500/10";
+    "w-full bg-gray-100 text-black dark:bg-white/5 dark:text-white border border-gray-300 dark:border-white/10 rounded px-4 py-3 transition focus:outline-none focus:ring-2 focus:ring-violet-500 dark:focus:ring-blue-500 focus:border-violet-500 dark:focus:border-blue-500 focus:bg-violet-500/10 dark:focus:bg-blue-500/10";
 
   const isNameError = touched.name && errors.name !== "";
   const isEmailError = touched.email && errors.email !== "";
@@ -140,7 +140,7 @@ export const Contact = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="min-h-screen flex flex-col items-center justify-center py-20 relative text-black dark:text-white bg-white dark:bg-zinc-950 transition-colors duration-300"
+      className="min-h-screen flex flex-col justify-between text-black dark:text-white bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-300"
     >
       <RevealOnScroll>
         <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6 z-10">
@@ -228,8 +228,7 @@ export const Contact = () => {
             <button
               type="submit"
               disabled={isSubmitDisabled}
-              className="w-full bg-violet-500 dark:bg-teal-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] dark:hover:shadow-[0_0_15px_rgba(20,158,149,0.5)] disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
-              aria-live="polite"
+                className="w-full bg-violet-500 dark:bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] dark:hover:shadow-[0_0_15px_rgba(37,99,235,0.5)] disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
@@ -258,7 +257,8 @@ export const Contact = () => {
         </div>
       </RevealOnScroll>
 
-      <footer className="w-full text-center text-gray-600 dark:text-gray-500 text-sm py-4 border-t border-gray-200 dark:border-white/10 absolute bottom-0 left-0 bg-white dark:bg-zinc-950">
+      {/* Footer */}
+      <footer className="w-full text-center text-gray-600 dark:text-gray-500 text-sm py-4 border-t border-gray-200 dark:border-white/10 bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-300 flex-shrink-0">
         © 2025 - M.Reza Chopannavaz
       </footer>
     </section>
