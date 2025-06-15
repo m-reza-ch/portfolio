@@ -6,6 +6,17 @@ import { RevealOnScroll } from "../RevealOnScroll";
 export const Experience = () => {
   const academicPositions = [
     {
+      title: "Graduate Teaching Assistant",
+      org: "Department of C.E., Tarbiat Modares University",
+      period: "Oct 2023 - Jun 2024",
+      details: [
+        "Assisted in designing practice questions",
+        "Provided guidance and support to students",
+        "Graded assignments",
+      ],
+      skills: ["DL", "DSP", "Python", "Tensorflow", "NumPy", "SciPy", "MNE"],
+    },
+    {
       title: "Research Assistant, Intelligent Technology Scanning",
       org: "I.T. Research Institute, Tarbiat Modares University",
       period: "Jul 2023 - Jul 2024",
@@ -20,17 +31,6 @@ export const Experience = () => {
         "RPA",
         "VR/AR/MR",
       ],
-    },
-    {
-      title: "Graduate Teaching Assistant",
-      org: "Department of C.E., Tarbiat Modares University",
-      period: "Oct 2023 - Jun 2024",
-      details: [
-        "Assisted in designing practice questions",
-        "Provided guidance and support to students",
-        "Graded assignments",
-      ],
-      skills: ["DL", "DSP", "Python", "Tensorflow", "NumPy", "SciPy", "MNE"],
     },
   ];
 
