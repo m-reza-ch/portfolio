@@ -32,7 +32,7 @@ export const Publications = () => {
         "Advances in Machine Learning for Epileptic Seizure Prediction: A Review of Electrocardiogram-Based Approaches",
       authors: "Chopannavaz, M. R.; Ghaderi, F.",
       journal: "Engineering Applications of Artificial Intelligence",
-      date: "Mar 2026",
+      date: "Jan 2026",
       status: "Published",
       doi: "https://doi.org/10.1016/j.engappai.2025.113717",
       abstract:
