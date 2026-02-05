@@ -7,6 +7,26 @@ export const Publications = () => {
   const pubs = [
     {
       title:
+        "Advances in Machine Learning for Epileptic Seizure Prediction: A Review of Electrocardiogram-Based Approaches",
+      authors: "Chopannavaz, M. R.; Ghaderi, F.",
+      journal: "Engineering Applications of Artificial Intelligence",
+      date: "Jan 2026",
+      status: "Published",
+      doi: "https://doi.org/10.1016/j.engappai.2025.113717",
+      abstract:
+        "Epilepsy is a neurological disorder that affects millions of people worldwide, necessitating reliable non-invasive prediction methods to improve patient outcomes. Although Electroencephalogram (EEG) signals remain the primary standard, recent advances have introduced Electrocardiogram (ECG) signals, specifically Heart Rate Variability (HRV), as a promising, accessible seizure biomarker. Unlike previous reviews, which have focused primarily on clinical perspectives, this study extends the focus and presents a systematic evaluation of machine learning methodologies applied to ECG-based seizure prediction for real-world implementation. In our analysis, two primary modeling paradigms are distinguished: classification, which discriminates between seizure states, and anomaly detection, which identifies deviations from non-seizure baselines. Our analysis reveals that while advanced machine learning models demonstrate superior sensitivity, they are frequently constrained by data scarcity and lack of interpretability. Furthermore, we identify that morphological and non-linear features can provide higher discriminative power than traditional metrics, although they are underutilized. This review consolidates current findings on public datasets, signal preprocessing, feature extraction, and validation protocols, while identifying key barriers such as physiological non-specificity. We conclude by proposing a strategic roadmap for future research, emphasizing the integration of multimodal sensor fusion and explainable design to enhance the robustness, scalability, and clinical trustworthiness of predictive systems.",
+      link_name: "DOI",
+      keywords: [
+        "Epilepsy",
+        "Seizure Prediction",
+        "Electrocardiogram",
+        "Hear Rate Variability",
+        "Classification",
+        "Anomaly Detection",
+      ],
+    },
+    {
+      title:
         "An Empirical Investigation of Reconstruction Loss-Based Models for Seizure Prediction from ECG Data",
       authors: "Chopannavaz, M. R.; Ghaderi, F.",
       journal:
@@ -25,26 +45,6 @@ export const Publications = () => {
         "Epilepsy",
         "Seizure",
         "Prediction",
-      ],
-    },
-    {
-      title:
-        "Advances in Machine Learning for Epileptic Seizure Prediction: A Review of Electrocardiogram-Based Approaches",
-      authors: "Chopannavaz, M. R.; Ghaderi, F.",
-      journal: "Engineering Applications of Artificial Intelligence",
-      date: "Jan 2026",
-      status: "Published",
-      doi: "https://doi.org/10.1016/j.engappai.2025.113717",
-      abstract:
-        "Epilepsy is a neurological disorder that affects millions of people worldwide, necessitating reliable non-invasive prediction methods to improve patient outcomes. Although Electroencephalogram (EEG) signals remain the primary standard, recent advances have introduced Electrocardiogram (ECG) signals, specifically Heart Rate Variability (HRV), as a promising, accessible seizure biomarker. Unlike previous reviews, which have focused primarily on clinical perspectives, this study extends the focus and presents a systematic evaluation of machine learning methodologies applied to ECG-based seizure prediction for real-world implementation. In our analysis, two primary modeling paradigms are distinguished: classification, which discriminates between seizure states, and anomaly detection, which identifies deviations from non-seizure baselines. Our analysis reveals that while advanced machine learning models demonstrate superior sensitivity, they are frequently constrained by data scarcity and lack of interpretability. Furthermore, we identify that morphological and non-linear features can provide higher discriminative power than traditional metrics, although they are underutilized. This review consolidates current findings on public datasets, signal preprocessing, feature extraction, and validation protocols, while identifying key barriers such as physiological non-specificity. We conclude by proposing a strategic roadmap for future research, emphasizing the integration of multimodal sensor fusion and explainable design to enhance the robustness, scalability, and clinical trustworthiness of predictive systems.",
-      link_name: "DOI",
-      keywords: [
-        "Epilepsy",
-        "Seizure Prediction",
-        "Electrocardiogram",
-        "Hear Rate Variability",
-        "Classification",
-        "Anomaly Detection",
       ],
     },
   ];
