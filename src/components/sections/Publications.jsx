@@ -16,6 +16,7 @@ export const Publications = () => {
       doi: "https://doi.org/10.48550/arXiv.2504.08381",
       abstract:
         "Epileptic seizures are sudden neurological disorders characterized by abnormal, excessive neuronal activity in the brain, which is often associated with changes in cardiovascular activity. These disruptions can pose significant physical and psychological challenges for patients. Therefore, accurate seizure prediction can help mitigate these risks by enabling timely interventions, ultimately improving patients' quality of life. Traditionally, EEG signals have been the primary standard for seizure prediction due to their precision in capturing brain activity. However, their high cost, susceptibility to noise, and logistical constraints limit their practicality, restricting their use to clinical settings. In order to overcome these limitations, this study focuses on leveraging ECG signals as an alternative for seizure prediction. In this paper, we present a novel method for predicting seizures based on detecting anomalies in ECG signals during their reconstruction. By extracting time-frequency features and leveraging various advanced deep learning architectures, the proposed method identifies deviations in heart rate dynamics associated with seizure onset. The proposed approach was evaluated using the Siena database and could achieve specificity of 99.16%, accuracy of 76.05%, and false positive rate (FPR) of 0.01/h, with an average prediction time of 45 minutes before seizure onset. These results highlight the potential of ECG-based seizure prediction as a patient-friendly alternative to traditional EEG-based methods.",
+      link_name: "DOI / Preprint",
       keywords: [
         "Anomaly Detection",
         "Autoencoders",
@@ -31,11 +32,12 @@ export const Publications = () => {
         "Advances in Machine Learning for Epileptic Seizure Prediction: A Review of Electrocardiogram-Based Approaches",
       authors: "Chopannavaz, M. R.; Ghaderi, F.",
       journal: "Engineering Applications of Artificial Intelligence",
-      date: "Oct 2024",
-      status: "Under Review",
-      doi: "https://doi.org/10.20944/preprints202504.0942.v1",
+      date: "Mar 2026",
+      status: "Published",
+      doi: "https://doi.org/10.1016/j.engappai.2025.113717",
       abstract:
-        "Epilepsy is a neurological disorder that affects millions of people worldwide and causes severe suffering. By providing opportunities for early intervention and seizure management, early detection of seizures can significantly enhance the quality of life for epileptic patients. Over the past few decades, significant efforts have been made to explore non-invasive methodologies for predicting seizures. Recent advancements have highlighted the potential of Electrocardiogram (ECG), particularly Heart Rate Variability (HRV) analysis, as a valuable biomarker for seizure prediction. However, the effectiveness of these approaches can vary, making it difficult to select the most appropriate strategy. Unlike previous reviews that have mostly focused on methods related to HRV analysis from medical perspectives, we aim to provide a comprehensive review of the machine learning techniques that have been applied to ECG data for predicting epileptic seizure attacks. In this study, we explore the relationship between the cardiovascular system and seizure activity, including the physiological effects of epileptic seizures and their implications for predictive modeling. Additionally, we provide a detailed comparison of available seizure prediction techniques, including a review of public datasets, common methodologies, key components, and evaluation metrics. Finally, the study highlights the strengths and limitations of various approaches while discussing existing challenges and future opportunities. We believe our work lays a basis for developing more sophisticated methods on utilizing the ECG signal for better seizure prediction.",
+        "Epilepsy is a neurological disorder that affects millions of people worldwide, necessitating reliable non-invasive prediction methods to improve patient outcomes. Although Electroencephalogram (EEG) signals remain the primary standard, recent advances have introduced Electrocardiogram (ECG) signals, specifically Heart Rate Variability (HRV), as a promising, accessible seizure biomarker. Unlike previous reviews, which have focused primarily on clinical perspectives, this study extends the focus and presents a systematic evaluation of machine learning methodologies applied to ECG-based seizure prediction for real-world implementation. In our analysis, two primary modeling paradigms are distinguished: classification, which discriminates between seizure states, and anomaly detection, which identifies deviations from non-seizure baselines. Our analysis reveals that while advanced machine learning models demonstrate superior sensitivity, they are frequently constrained by data scarcity and lack of interpretability. Furthermore, we identify that morphological and non-linear features can provide higher discriminative power than traditional metrics, although they are underutilized. This review consolidates current findings on public datasets, signal preprocessing, feature extraction, and validation protocols, while identifying key barriers such as physiological non-specificity. We conclude by proposing a strategic roadmap for future research, emphasizing the integration of multimodal sensor fusion and explainable design to enhance the robustness, scalability, and clinical trustworthiness of predictive systems.",
+      link_name: "DOI",
       keywords: [
         "Epilepsy",
         "Seizure Prediction",
@@ -114,7 +116,7 @@ const PubCard = ({ pub, isOpen, onToggle }) => {
           className="inline-flex items-center gap-2 px-2 py-1 rounded-md text-violet-600 dark:text-blue-300 text-sm font-semibold bg-transparent dark:border-blue-300/30 hover:bg-violet-600/10 dark:hover:bg-blue-300/10 hover:text-violet-700 dark:hover:text-blue-400 transform transition duration-300 ease-in-out active:scale-95"
         >
           <Link size={16} />
-          DOI / Preprint
+          {pub.link_name}
         </a>
 
         <button
